@@ -55,25 +55,34 @@ Dataset includes:
 The source data was transformed from an OLTP structure into a dimensional data warehouse for analytical processing.
 
 
-## Solution Architecture
+**Solution Architecture
 
-Data Sources (CSV Files + SQL Server)
-            │
-            
-      SSIS ETL Process
-            │
-            
-   SQL Server Data Warehouse
-            │
-            
-       SSAS Cube
-            │
-      ┌─────┴─────┐
-                 
- Excel OLAP    Power BI
-      |           |            
- Business Analytics & Reporting
+**Data Flow Overview
 
+Data Sources
+            CSV Files
+            SQL Server Database
+     
+ETL Processing (SSIS)
+            Extract
+            Transform
+            Load
+            
+SQL Server Data Warehouse
+            Centralized storage for analytical data
+
+SSAS Multidimensional Cube
+            Enables fast analytical queries and OLAP operations
+
+Reporting & Analytics Tools
+            Microsoft Excel (OLAP Analysis)
+            Power BI Dashboards
+
+Business Analytics & Reporting
+            Sales Analysis
+            Customer Behavior Analysis
+            Trend Identification
+            Decision Support
 
 
 ## Data Warehouse Design
